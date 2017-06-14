@@ -1,5 +1,5 @@
 {
-  "name": "winston-request-logger",
+  "name": "google-request-logger",
   "description": "Winston based http request logger for express.",
   "version": "1.0.7",
   "homepage": "https://github.com/wolfeidau/winston-request-logger",
@@ -21,7 +21,7 @@
       "url": "https://github.com/wolfeidau/winston-request-logger/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "lib/winston-request-logger",
+  "main": "lib/google-request-logger",
   "engines": {
     "node": ">= 0.6.0"
   },
