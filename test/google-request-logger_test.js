@@ -5,8 +5,8 @@ const connect = require('connect'),
     request = require('supertest'),
     sinon = require('sinon'),
     fakeLogger = { 
-        write: () => {}, 
-        entry: () => {}
+        write: () => { return; }, 
+        entry: () => { return {foo: "bar"}; }
     };
 
 // Helper method to create a fake Connect server with our middleware and
@@ -73,7 +73,7 @@ describe('google-request-logger', function () {
             request(app)
               .get(__filename.replace(__dirname, ''))
               .end(function() {
-                
+                    
                     const [{severity, httpRequest}, payload] = entry.args[0];
                     
                     payload.should.be.empty;
